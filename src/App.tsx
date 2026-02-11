@@ -10,7 +10,7 @@ import { InsightsSection } from './sections/InsightsSection';
 import { CTASection } from './sections/CTASection';
 import { Toaster } from './components/ui/sonner';
 import { toast } from 'sonner';
-import type { s } from 'framer-motion/m';
+
 
 function App() {
   const {
