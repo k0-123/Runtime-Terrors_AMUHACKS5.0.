@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { User, Skill, JobMatch, Resume, UploadedDocument, ViewState } from '@/types';
+import type { User, Skill, JobMatch, Resume, UploadedDocument, ViewState } from '../types';
 
 export function useAppStore() {
   const [user, setUser] = useState<User | null>(null);
