@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# CareerBridge AI Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CareerBridge is an advanced AI-powered resume builder designed to help job seekers create professional, tailored resumes that stand out. Leveraging the power of artificial intelligence, it analyzes job descriptions to optimize your resume for specific roles, ensuring higher compatibility with Applicant Tracking Systems (ATS).
 
-Currently, two official plugins are available:
+![Project Banner](public/vite.svg) *Add a screenshot or banner here*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **AI-Powered Analysis**: Automatically match your resume against job descriptions to identify gaps and improved phrasing.
+- **Smart Resume Builder**: Create professional resumes with customizable sections and modern templates.
+- **Skill Extraction**: Extracts key skills from your uploaded documents (PDF, DOCX) to build a comprehensive profile.
+- **Real-Time Job Matching**: Get instant feedback on how well your profile matches a target job description.
+- **Insights Dashboard**: Visualize your resume performance and skill gaps with interactive charts.
+- **Secure & Private**: All processing happens locally in your browser (mocked backend for demo purposes).
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend Framework**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- **State Management**: React `useState` / Custom Hooks (Zustand ready)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Forms**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Follow these steps to get the project up and running on your local machine.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/careerbridge-ai.git
+    cd careerbridge-ai
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser and navigate to `http://localhost:5173` to see the application.
+
+## 📂 Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+├── hooks/             # Custom React hooks (state management)
+├── lib/               # Utility functions and helpers
+├── sections/          # Major application sections (Hero, Resume, Skills, etc.)
+├── types/             # TypeScript type definitions
+├── App.tsx            # Main application component
+└── main.tsx           # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔮 Future Roadmap
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [ ] **Backend Integration**: Connect to a real backend (Node.js/Python) for persistent storage.
+- [ ] **Advanced AI Models**: Integrate with OpenAI/Gemini API for deeper content generation.
+- [ ] **PDF Export**: Generate high-quality PDF resumes directly from the browser.
+- [ ] **User Authentication**: Implement secure login with Auth0 or Firebase.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
